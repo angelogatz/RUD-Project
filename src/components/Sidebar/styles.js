@@ -10,11 +10,9 @@ export const Container = styled.div`
 
   @keyframes showSidebar {
     from {
-      opacity: 0;
       width: 0;
     }
     to {
-      opacity: 1;
       width: 300px;
     }
   }

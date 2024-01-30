@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: rgb(191, 199, 214);
-  height: 100vh;
+  background-color: rgb(230, 237, 250);
   display: flex;
   float: right;
   width: 76.6%;
