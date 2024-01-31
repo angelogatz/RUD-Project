@@ -21,7 +21,7 @@ export const Button = styled.button`
   box-shadow: 0 3px #999;
   float: right;
   margin-right: 30px;
-  margin-top: 17px;
+  margin-top: -52px;
 
   &:hover {
     background-color: #535d6e
@@ -32,4 +32,11 @@ export const Button = styled.button`
     box-shadow: 0 2px #666;
     transform: translateY(2px);
   }
+`
+
+export const Title = styled.h1 `
+  padding: 0.6em;
+  color: white;
+  font-size: 30px;
+  width: 437px;
 `

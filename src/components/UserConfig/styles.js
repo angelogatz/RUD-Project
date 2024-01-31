@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-  background-color: rgb(230, 237, 250);
+  background-color: #f7faff;
   display: flex;
   float: right;
   width: 76.6%;
@@ -14,9 +14,9 @@ export const Content = styled.div`
 
 export const Title = styled.h1 `
   color: #404040;
-  margin-top: -32px;
-  margin-left: 40px;
-  font-size: 30px;
+  margin-right: 520px;
+  font-size: 18px;
+  font-weight: 300;
 `
 
 export const Paragraph = styled.p`
@@ -24,6 +24,40 @@ export const Paragraph = styled.p`
   margin: 40px 0 0 35px;
   font-size: 18px;
 `
+
+export const StyledTable = styled.table`
+box-shadow: 3px 3px 5px 1px #bac5d9;
+  background-color: rgb(230, 237, 250);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  margin: 45px;
+`;
+
+export const TableRow = styled.tr`
+  border: 1px solid #707070;
+  border-radius: 5px;
+`;
+
+export const TableCell = styled.td`
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
+  font-family: 'Roboto', sans-serif;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: ${(prop) => prop.backgroundColor};
+
+  > svg {
+    font-size: 31px;
+    margin-top: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+`;
 
 export const UserCard = styled.div`
  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
@@ -43,10 +77,13 @@ export const UserCard = styled.div`
   }
 `
 
-export const UserImageBubble = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: black;
+export const UserImageBubble = styled.img.attrs((props) => ({
+  src: props.avatar,
+}))`
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  background-color: ${(prop) => console.log(prop.avatar)};
   border-radius: 50%;
-  background-image: ${(prop) => URL(prop.image)};
 `

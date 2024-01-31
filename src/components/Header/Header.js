@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Button, Container } from './styles'
+import { Button, Container, Title } from './styles'
 
 
 const Header = () => {
@@ -8,6 +8,9 @@ const Header = () => {
   console.log(url)
   return (
     <Container>
+      <Title>
+        Register User Dashboard
+      </Title>
       {url == '/user'
         ? <Button>Novo usuário</Button>
         : null

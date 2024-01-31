@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Router>
-        <Sidebar active={true}/>
         <Header />
+        <Sidebar active={true}/>
         <Routes>
           <Route exact path='/' element={<Dashboard/>} />
           <Route exact path='/user' element={<UserConfig/>} />
