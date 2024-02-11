@@ -1,10 +1,12 @@
 import React from 'react'
 import { Container, Title } from './style'
+import DashBoardCard from './DashboardCards/DashBoardCard'
 
 const Dashboard = () => {
   return (
     <Container>
-      <Title>Dashboard</Title>
+      <DashBoardCard>
+      </DashBoardCard>
     </Container>
   )
 }

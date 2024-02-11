@@ -2,16 +2,15 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Button, Container, Title } from './styles'
 
 
-const Header = () => {
+const Header = ({type}) => {
   let url = window.location.pathname;
 
-  console.log(url)
   return (
     <Container>
       <Title>
         Register User Dashboard
       </Title>
-      {url == '/user'
+      {type == 'user'
         ? <Button>Novo usuário</Button>
         : null
       }

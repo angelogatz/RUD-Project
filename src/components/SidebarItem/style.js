@@ -24,3 +24,8 @@ export const Container = styled.div`
     background-color: black;
   }
 `;
+
+export const FooterLink = styled.a`
+  color: white;
+  
+`

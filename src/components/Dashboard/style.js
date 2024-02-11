@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   float: right;
   width: 76.6%;
+  margin-top: 65px;
 `;
 
 export const Content = styled.div`

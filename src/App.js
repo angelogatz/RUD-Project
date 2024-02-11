@@ -9,11 +9,28 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
         <Sidebar active={true}/>
         <Routes>
-          <Route exact path='/' element={<Dashboard/>} />
-          <Route exact path='/user' element={<UserConfig/>} />
+          <Route 
+            exact 
+            path='/' 
+            element={
+              <>
+                <Header type="home"/>
+                <Dashboard/>
+              </>
+            } 
+          />
+          <Route 
+            exact 
+            path='/user' 
+            element={
+              <>
+                <Header type="user"/>
+                <UserConfig/>
+              </>
+            } 
+          />
         </Routes>
       </Router>
     </>

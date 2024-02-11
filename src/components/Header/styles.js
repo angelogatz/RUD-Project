@@ -6,6 +6,9 @@ export const Container = styled.div`
   font-family: roboto sans-serif;
   background-color: #171923;
   height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
 `;
 
 export const Button = styled.button`
@@ -33,8 +36,9 @@ export const Button = styled.button`
     transform: translateY(2px);
   }
 `
-
 export const Title = styled.h1 `
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
+  font-family: 'Roboto', sans-serif;
   padding: 0.6em;
   color: white;
   font-size: 30px;

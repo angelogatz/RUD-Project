@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   float: right;
   width: 76.6%;
+  margin-top: 65px;
 `;
 
 export const Content = styled.div`
@@ -26,7 +27,7 @@ export const Paragraph = styled.p`
 `
 
 export const StyledTable = styled.table`
-box-shadow: 3px 3px 5px 1px #bac5d9;
+  box-shadow: 3px 3px 5px 1px #bac5d9;
   background-color: rgb(230, 237, 250);
   padding: 20px;
   border-radius: 8px;
@@ -51,6 +52,7 @@ export const TableCell = styled.td`
     font-size: 31px;
     margin-top: 5px;
     margin-left: 15px;
+    transform: translateX(-8px);
     cursor: pointer;
 
     &:hover {
@@ -80,9 +82,8 @@ export const UserCard = styled.div`
 export const UserImageBubble = styled.img.attrs((props) => ({
   src: props.avatar,
 }))`
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
+  width: 50px;
+  height: 50px;
   margin-top: 5px;
   background-color: ${(prop) => console.log(prop.avatar)};
   border-radius: 50%;
