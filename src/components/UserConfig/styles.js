@@ -16,8 +16,9 @@ export const Content = styled.div`
 export const Title = styled.h1 `
   color: #404040;
   margin-right: 520px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
+  font-weight: bold;
 `
 
 export const Paragraph = styled.p`
@@ -29,7 +30,7 @@ export const Paragraph = styled.p`
 export const StyledTable = styled.table`
   box-shadow: 3px 3px 5px 1px #bac5d9;
   background-color: rgb(230, 237, 250);
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   width: 90%;
   margin: 45px;
@@ -43,16 +44,13 @@ export const TableRow = styled.tr`
 export const TableCell = styled.td`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
   font-family: 'Roboto', sans-serif;
-  padding: 8px;
   border-radius: 5px;
-  text-align: left;
   background-color: ${(prop) => prop.backgroundColor};
 
   > svg {
     font-size: 31px;
     margin-top: 5px;
     margin-left: 15px;
-    transform: translateX(-8px);
     cursor: pointer;
 
     &:hover {

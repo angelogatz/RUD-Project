@@ -1,88 +1,42 @@
-import React from 'react'
-import { Container, Paragraph, StyledTable, TableCell, TableRow, Title, UserCard, UserImageBubble } from './styles'
+import React, { useEffect, useState } from 'react'
+import { Container, Paragraph, StyledTable, TableCell, TableRow, Title } from './styles'
 import { FaUser, FaUserEdit } from 'react-icons/fa'
-import defaultUserAvatar from '../../images/focaDefault.jpg'
 import { MdDeleteForever } from "react-icons/md";
-
-const USERS_MOCK_DATA = [
-  {
-      name: 'Claudio',
-      id: 1,
-      permission: 'Admin',
-      email: 'claudio@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Fernando',
-      id: 2,
-      permission: 'Gerente',
-      email: 'fernando@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Natália',
-      id: 3,
-      permission: 'Admin',
-      email: 'natalia@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Samira',
-      id: 4,
-      permission: 'Proprietário',
-      email: 'samira@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Stephany',
-      id: 5,
-      permission: 'Padrão',
-      email: 'stephany@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Jonatan',
-      id: 6,
-      permission: 'Gerente',
-      email: 'jonatan@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Angelo',
-      id: 7,
-      permission: 'Admin',
-      email: 'angelo@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-  {
-      name: 'Vanessa',
-      id: 8,
-      permission: 'Padrão',
-      email: 'vanessa@gmail.com',
-      avatar: defaultUserAvatar,
-  },
-];
+import { apiGetAllUsers } from '../../services/users';
 
 const UserConfig = () => {
 
-  console.log(USERS_MOCK_DATA)
+  const [user, setUser] = useState();
+
+  const fetchUserData = () => {
+    apiGetAllUsers().then(({data}) => {
+      setUser(data)
+    })
+    .catch((error) => {
+      console.error(error.message);
+    })
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
 
   return (
     <>
       <Container>
-        {USERS_MOCK_DATA 
+        {user 
            ? <StyledTable>
-              {USERS_MOCK_DATA.map((data) => {
+              {user.map((data) => {
                 return (
                   <TableRow key={data.id}>
                     <TableCell backgroundColor="#f7faff">
-                      <UserImageBubble avatar={data.avatar}/>
+                      <Title style={{margin: "10px", transform: "translateX(4px)"}}>{data.age}</Title>
                     </TableCell>
                     <TableCell backgroundColor="#f7faff">
-                      <Title style={{width: "0px"}}>{data.name}</Title>
+                      <Title style={{width: "0px", whiteSpace: "nowrap", marginLeft: '20px'}}>{data.username}</Title>
                     </TableCell>
                     <TableCell backgroundColor="#f7faff">
-                      <Title style={{margin: "0px"}}>{data.permission}</Title>
+                      <Title style={{margin: "0px", transform: "translateX(5px)"}}>{data.permission}</Title>
                     </TableCell>
                     <TableCell backgroundColor="#f7faff" style={{border: "none"}}>
                       <MdDeleteForever style={{color: "#a33b36"}}/>
