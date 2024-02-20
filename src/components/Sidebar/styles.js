@@ -30,10 +30,6 @@ export const LogosContainer = styled.div`
     color: white;
     font-size: 60px;
     cursor: pointer;
-
-    &:hover {
-      color: ;
-    }
   }
 `
 

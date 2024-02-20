@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #f7faff;
-  display: flex;
+  /* background-color: #f7faff; */
+  display: flexbox;
   float: right;
   width: 76.6%;
   margin-top: 65px;
+  flex-wrap: nowrap;
+  overflow: auto;
 `;
 
 export const Content = styled.div`
-  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
 `
 
 export const Title = styled.h1 `

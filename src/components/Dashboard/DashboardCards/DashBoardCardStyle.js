@@ -19,6 +19,19 @@ export const Title = styled.h1 `
   font-size: 22px;
   font-weight: bold;
   width: 100%;
+
+
+  > svg {
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      transition: .2s ease;
+    }
+  }
 `
 
 export const Paragraph = styled.p `
